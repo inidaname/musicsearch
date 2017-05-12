@@ -19,9 +19,11 @@ const
   autoprefixer = require('autoprefixer'),
   mqpacker = require('css-mqpacker'),
   cssnano = require('cssnano'),
+  csscomb = require('gulp-csscomb'),
 
   //browser-sync
-  browserSync = require('browser-sync').create();
+  browserSync = require('browser-sync').create(),
+  ghPages = require('gulp-gh-pages');
 
   // development mode?
   devBuild = (process.env.NODE_ENV !== 'production'),
@@ -42,6 +44,11 @@ gulp.task('images', () => {
 		 verbose: true
 	 }))
     .pipe(gulp.dest(out));
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('app/**/*')
+    .pipe(ghPages());
 });
 
 // HTML processing
@@ -96,6 +103,7 @@ gulp.task('css', ['images'], function() {
       precision: 3,
       errLogToConsole: true
     }))
+	 .pipe(csscomb())
     .pipe(postcss(postCssOpts))
     .pipe(gulp.dest(folder.build + 'css/'));
 

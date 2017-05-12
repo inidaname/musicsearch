@@ -1,0 +1,19 @@
+[12:18:22] /Users/asmausani/WebApps/MusicSearch/devTools/images/Magnify@2x.png
+[12:18:22] gulp-smushit: Compress rate % 63
+[12:18:22] gulp-smushit: 15420 bytes  to   5663 bytes
+[12:18:24] /Users/asmausani/WebApps/MusicSearch/devTools/images/Page 1@2x.png
+[12:18:24] gulp-smushit: Compress rate % 0
+
+[12:18:24] gulp-smushit: 3534 bytes  to   3534 bytes
+[12:18:34] /Users/asmausani/WebApps/MusicSearch/devTools/images/album-icon@2x.png
+[12:18:34] gulp-smushit: Compress rate % 57
+[12:18:34] gulp-smushit: 9775 bytes  to   4201 bytes
+[12:18:54] /Users/asmausani/WebApps/MusicSearch/devTools/images/artist-icon@2x.png
+[12:18:54] gulp-smushit: Compress rate % 27
+[12:18:54] gulp-smushit: 1503 bytes  to   1101 bytes
+[12:19:27] /Users/asmausani/WebApps/MusicSearch/devTools/images/gl-logo@2x.png
+[12:19:27] gulp-smushit: Compress rate % 45
+[12:19:27] gulp-smushit: 7029 bytes  to   3831 bytes
+[12:20:50] /Users/asmausani/WebApps/MusicSearch/devTools/images/hero-img@2x.png
+[12:20:50] gulp-smushit: Compress rate % 75
+[12:20:50] gulp-smushit: 865249 bytes  to   218478 bytes
