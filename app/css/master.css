@@ -1,0 +1,44 @@
+html, body {
+  background-color: #464646;
+  margin: 0px;
+  padding: 0px; }
+
+.header {
+  position: relative;
+  background-image: url("../images/hero-img@2x.png");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #C14368;
+  height: 650px;
+  width: 100%; }
+
+.topmost {
+  position: relative;
+  width: 100%;
+  margin: 0 auto; }
+  .topmost img {
+    width: 75px;
+    height: 95px;
+    margin-left: 40px;
+    margin-top: 40px; }
+  .topmost p {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    letter-spacing: 2px;
+    right: 35px;
+    top: 35px; }
+  @media screen and (min-width: 320px) and (max-width: 780px) {
+    .header {
+      height: 700px;
+      background-size: 100%; }
+      .topmost img {
+        width: 40px;
+        height: 50px;
+        margin-left: 20px;
+        margin-top: 20px; }
+      .topmost p {
+        letter-spacing: 0;
+        right: 10px;
+        top: 10px; } }
