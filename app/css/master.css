@@ -17,6 +17,7 @@ html, body {
     background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #ce4283), color-stop(100%, #b2455d));
     height: 650px;
     width: 100%;
+    z-index: 100000;
 }
 .header .hero {
     position: absolute;
@@ -41,6 +42,7 @@ html, body {
     position: relative;
     width: 100%;
     margin: 0 auto;
+    z-index: 10000000;
 }
 .topmost img {
     width: 75px;
@@ -225,11 +227,10 @@ html, body {
     left: 0;
     font-family: "Raleway Thin", sans-serif;
     font-weight: normal;
-    display: none;
     font-size: 20px;
     color: #cccccc;
-    opacity: .7;
-    min-height: 300px;
+    background-color: #383a49;
+    min-height: 360px;
     text-align: center;
     padding-top: 50px;
 }
@@ -294,6 +295,9 @@ html, body {
         font-size: 22px;
     }
     .resultBg {
+        display: none;
+    }
+    .MagDis {
         display: none;
     }
     .footer {
