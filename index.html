@@ -2,6 +2,7 @@
 <html lang="en" ng-app="MusicSearch">
 
 <head>
+	 <base href="/">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Music Search</title>
@@ -10,107 +11,20 @@
 </head>
 
 <body>
-	<div class="header">
-		<div class="topmost">
-			<img src="images/gl-logo@2x.png" alt="">
-			<p>Powered by Spotify</p>
-		</div>
-		<div class="hero">
-
-		</div>
-		<div class="arrDwn">
-			<img src="images/Page 1@2x.png" height="70px" alt="">
-		</div>
-	</div>
-
-	<div class="wrapper">
-		<!-- search bar section -->
-		<div class="searchSec">
-			<form action="index.html" method="post">
-				<input type="text" name="search" value="" placeholder="Search for artist or album title">
-				<button type="submit">Search</button>
-			</form>
-		</div>
-
-		<!-- result display section -->
-		<div class="resultBg">
-			<div class="resultSec">
-				<!-- Card display of results -->
-				<ul class="ReLoop">
-					<li>
-						<!-- artist, album, song clipart -->
-						<div class="cardResult">
-							<img class="imgRes" src="https://s-media-cache-ak0.pinimg.com/736x/71/67/04/71670453736184be195d09a004ad60d9.jpg" height="200px" alt="">
-
-							<!-- image to overlay the type of content -->
-							<img src="images/artist-icon@2x.png" width="35px" alt="" class="clipOval">
-							<div class="showClick">
-
-							</div>
-						</div>
-						<!-- name of artist, album or song -->
-						<div class="cardName">
-
-						</div>
-					</li>
-					<li>
-						<!-- artist, album, song clipart -->
-						<div class="cardResult">
-							<img class="imgRes" src="https://s-media-cache-ak0.pinimg.com/736x/71/67/04/71670453736184be195d09a004ad60d9.jpg" height="200px" alt="">
-
-							<!-- image to overlay the type of content -->
-							<img src="images/artist-icon@2x.png" width="35px" alt="" class="clipOval">
-							<div class="showClick">
-
-							</div>
-						</div>
-						<!-- name of artist, album or song -->
-						<div class="cardName">
-
-						</div>
-					</li>
-					<li>
-						<!-- artist, album, song clipart -->
-						<div class="cardResult">
-							<img class="imgRes" src="https://s-media-cache-ak0.pinimg.com/736x/71/67/04/71670453736184be195d09a004ad60d9.jpg" height="200px" alt="">
-
-							<!-- image to overlay the type of content -->
-							<img src="images/artist-icon@2x.png" width="30px" alt="" class="clipOval">
-							<div class="showClick">
-								<img src="images/Bitmap@2x.png" height="40%" alt="">
-								<h3>View Albums</h3>
-							</div>
-						</div>
-						<!-- name of artist, album or song -->
-						<div class="cardName">
-
-						</div>
-					</li>
-				</ul>
-			</div>
-			<!-- Magnify glass display here -->
-			<div class="MagDis">
-				<img src="images/Magnify@2x.png" width="170px" height="170px" alt="">
-				<h3>Your result will display here</h3>
-			</div>
-		</div>
-
-		<!-- footer section begins here -->
-		<div class="footer">
-			<div>
-				<p>Designed by Geek Label</p>
-				<p>Powered by Spotify</p>
-			</div>
-		</div>
-
-	</div>
+	<heading></heading>
+	<div ng-view></div>
+	<!-- footer section begins here -->
+	<footing></footing>
 
 	<script src="bower_components/angular/angular.js" charset="utf-8"></script>
 	<script src="bower_components/angular-route/angular-route.js" charset="utf-8"></script>
 	<script src="bower_components/angular-touch/angular-touch.js" charset="utf-8"></script>
 	<script src="bower_components/angular-animate/angular-animate.js" charset="utf-8"></script>
 	<script src="index.js" charset="utf-8"></script>
+	<script src="home/home.js" charset="utf-8"></script>
+	<script src="search/search.js" charset="utf-8"></script>
 	<script src="directives/heading.js" charset="utf-8"></script>
+	<script src="directives/footing.js" charset="utf-8"></script>
 </body>
 
 </html>
