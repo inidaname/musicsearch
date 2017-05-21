@@ -1,3 +1,27 @@
+$cardHeight: 330px;
+$picHeight: ($cardHeight - 60);
+
+@mixin Category($name) {
+	@if $name == 'album' {
+		background-image: url('../images/album-icon@2x.png');
+		background-position: left bottom;
+		background-repeat: no-repeat;
+		background-size: 70%;
+	}
+	@if $name == 'artist' {
+		background-image: url('../images/artist-icon@2x.png');
+		background-position: left bottom;
+		background-repeat: no-repeat;
+		background-size: 50%;
+	}
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	left: 10px;
+	bottom: 10px;
+	z-index: 1111;
+}
+
 @mixin mQ($arg...) {
     @if length($arg) == 2 {
         @media screen and (min-width: nth($arg, 1)) and (max-width: nth($arg, 2)) {

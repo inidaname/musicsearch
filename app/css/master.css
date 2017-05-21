@@ -8,13 +8,33 @@ html, body {
 /* Header content begins here */
 .header {
     position: relative;
-    background-image: url("../images/hero-img@2x.png");
-    background-size: 45%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #b54560;
+    background-size: cover;
+    background-color: #ce4283;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#CE4283, endColorstr=#B2455D);
+    background-image:         -webkit-gradient(linear, left top, left bottom, from(#ce4283), to(#b2455d));
+    background-image:         linear-gradient(to bottom, #ce4283 0%, #b2455d 100%);
+    background-image:      -o-linear-gradient(to bottom, #ce4283 0%, #b2455d 100%);
+    background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%, #ce4283), color-stop(100%, #b2455d));
     height: 650px;
     width: 100%;
+}
+.header .hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    background-image: url("../images/hero-img@2x.png");
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.header .arrDwn {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    text-align: center;
 }
 
 .topmost {
@@ -50,7 +70,7 @@ html, body {
 .searchSec {
     width: 100%;
     text-align: center;
-    padding: 20px 0;
+    padding: 15px 0;
     background-color: #333441;
 }
 .searchSec input {
@@ -91,34 +111,125 @@ html, body {
     position: relative;
     margin: 0;
     width: 100%;
-    min-height: 500px;
+    min-height: 400px;
     background-color: #383a49;
 }
 
 /* Masking the result section */
 .resultSec {
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 0;
     left: 0;
-    opacity: .2;
-    min-height: 470px;
-    text-align: center;
+    min-height: 400px;
     padding-top: 50px;
+    display: block;
+}
+
+.ReLoop {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    margin-left: 70px;
+    list-style-type: none;
+}
+.ReLoop li {
+    position: relative;
+    display: inline-block;
+    width: 260px;
+    height: 330px;
+    border-radius: 5px;
+    margin: 15px;
+    -webkit-box-shadow: 0 0 5px 2px #333333;
+            box-shadow: 0 0 5px 2px #333333;
+}
+.ReLoop li .cardResult {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    z-index: 10;
+}
+.ReLoop li .cardResult:hover .imgRes {
+    -webkit-filter: blur(7px);
+            filter: blur(7px);
+}
+.ReLoop li .cardResult:hover .showClick {
+    bottom: 0;
+    height: 100%;
+    opacity: .8;
+}
+.ReLoop li .cardResult:hover .clipOval {
     display: none;
+}
+.ReLoop li .cardResult .imgRes {
+    position: relative;
+    width: 100%;
+    height: 270px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* categorising for artist and album */
+.clipOval {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    opacity: .8;
+}
+
+/* for image overlay on hover */
+.showClick {
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    width: 103%;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    right: 0;
+    top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+}
+.showClick img {
+    margin-top: 30%;
+}
+.showClick h3 {
+    margin-top: 0;
+    color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+}
+
+/* defining the card description */
+.cardName {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    height: 60px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 /* Magnify display */
 .MagDis {
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 0;
     left: 0;
     font-family: "Raleway Thin", sans-serif;
+    font-weight: normal;
+    display: none;
     font-size: 20px;
     color: #cccccc;
     opacity: .7;
-    min-height: 470px;
+    min-height: 300px;
     text-align: center;
     padding-top: 50px;
 }
@@ -131,7 +242,7 @@ html, body {
     position: relative;
     text-align: center;
     width: 100%;
-    height: 70px;
+    height: 80px;
     background-color: #333441;
     font-family: "Raleway Light", sans-serif;
     font-size: 15px;
@@ -148,6 +259,10 @@ html, body {
     content: " -";
 }
 @media screen and (min-width: 320px) and (max-width: 780px) {
+    .header .hero {
+        height: 700px;
+        background-size: 100%;
+    }
     .header {
         height: 700px;
         background-size: 100%;

@@ -28,14 +28,14 @@
 }
 
 @font-face {
-    font-family: "Raleway";
+    font-family: "Raleway Light";
     src: url("Fonts/Raleway-Light.ttf") format("truetype");
     font-weight: lighter;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Raleway";
+    font-family: "Raleway Light";
     src: url("Fonts/Raleway-LightItalic.ttf") format("truetype");
     font-weight: lighter;
     font-style: italic;
@@ -73,14 +73,14 @@
 
 /* Raleway font for extra light typeface */
 @font-face {
-    font-family: "Raleway Light";
+    font-family: "Raleway Lighter";
     src: url("Fonts/Raleway-ExtraLight.ttf") format("truetype");
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Raleway Light";
+    font-family: "Raleway Lighter";
     src: url("Fonts/Raleway-ExtraLightItalic.ttf") format("truetype");
     font-weight: 100;
     font-style: italic;

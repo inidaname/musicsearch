@@ -139,7 +139,7 @@ gulp.task('watch', function() {
 
   //browserSync reload
   gulp.watch("app/*.html").on('change', browserSync.reload);
-
+  gulp.watch("app/css/*.css").on('change', browserSync.reload);
 });
 
 
