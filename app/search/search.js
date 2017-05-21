@@ -6,4 +6,5 @@ angular.module('MusicSearch.search', ['ngRoute', 'ngAnimate', 'ngTouch'])
 	 });
   }])
  .controller('SearchCtrl', ['$scope', '$log', function($scope, $log) {
+   $log.info($scope)
  }])
