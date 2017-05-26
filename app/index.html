@@ -11,7 +11,8 @@
 
 <body>
 	<heading></heading>
-	<div ng-view></div>
+	<searchbar></searchbar>
+	<div class="wrapper" ng-view></div>
 	<!-- footer section begins here -->
 	<footing></footing>
 
@@ -19,11 +20,15 @@
 	<script src="bower_components/angular-route/angular-route.js" charset="utf-8"></script>
 	<script src="bower_components/angular-touch/angular-touch.js" charset="utf-8"></script>
 	<script src="bower_components/angular-animate/angular-animate.js" charset="utf-8"></script>
+	<script src="bower_components/angular-spotify/src/angular-spotify.js" charset="utf-8"></script>
 	<script src="index.js" charset="utf-8"></script>
 	<script src="home/home.js" charset="utf-8"></script>
 	<script src="search/search.js" charset="utf-8"></script>
 	<script src="directives/heading.js" charset="utf-8"></script>
+	<script src="directives/searchbar.js" charset="utf-8"></script>
 	<script src="directives/footing.js" charset="utf-8"></script>
+	<script src="factory/factory.js" charset="utf-8"></script>
+	<script src="service/service.js" charset="utf-8"></script>
 </body>
 
 </html>

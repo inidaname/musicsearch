@@ -21,9 +21,12 @@ const
   cssnano = require('cssnano'),
   csscomb = require('gulp-csscomb'),
 
-  //browser-sync
-  browserSync = require('browser-sync').create(),
-  ghPages = require('gulp-gh-pages');
+  //gulp deploy to github pages
+  ghPages = require('gulp-gh-pages'),
+
+	//server for reload and serve
+  nodemon = require('gulp-nodemon'),
+  jshint = require('gulp-jshint');
 
   // development mode?
   devBuild = (process.env.NODE_ENV !== 'production'),
@@ -109,18 +112,31 @@ gulp.task('css', ['images'], function() {
 
 });
 
-// Static server
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "app/"
-        }
-    });
-});
+gulp.task('lint', function () {
+  gulp.src('./**/*.js')
+    .pipe(jshint())
+})
 
+gulp.task('develop', function () {
+  var stream = nodemon({
+	  script: 'server.js',
+	  ext: 'html js',
+	  ignore: ['ignored.js'],
+	  tasks: ['lint']
+  })
+
+  stream
+      .on('restart', function () {
+        console.log('restarted!')
+      })
+      .on('crash', function() {
+        console.error('Application has crashed!\n')
+         stream.emit('restart', 10)  // restart the server in 10 seconds
+      })
+})
 
 // run all tasks
-gulp.task('run', ['html', 'css', 'js', 'browser-sync']);
+gulp.task('run', ['html', 'css', 'js', 'develop']);
 
 // watch for changes
 gulp.task('watch', function() {
@@ -137,9 +153,6 @@ gulp.task('watch', function() {
   // css changes
   gulp.watch(folder.src + 'SASS/**/*', ['css']);
 
-  //browserSync reload
-  gulp.watch("app/*.html").on('change', browserSync.reload);
-  gulp.watch("app/css/*.css").on('change', browserSync.reload);
 });
 
 
