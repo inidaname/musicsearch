@@ -1,0 +1,7 @@
+<!-- search bar section -->
+<div class="searchSec" ng-controller="SearchCtrl">
+	<form action="index.html" method="post">
+		<input type="text" name="search" ng-model="searchAble" ng-blur="checkKey()" value="" placeholder="Search for artist or album title">
+		<button type="submit">Search</button>
+	</form>
+</div>
