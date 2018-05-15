@@ -600,7 +600,7 @@ body
     }
     .resultBg
     {
-        display: none;
+        display: block;
     }
     .MagDis
     {

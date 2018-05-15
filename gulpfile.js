@@ -29,8 +29,6 @@ const
   jshint = require('gulp-jshint'),
   browserSync = require('browser-sync').create();
 
-  // development mode?
-  devBuild = (process.env.NODE_ENV !== 'production');
 
   // folders
   folder = {
@@ -41,14 +39,13 @@ const
 
 gulp.task('build', function () {
     return folder.build = 'dist/';
-    // return gulp.src(folder.build).pipe(gulp.tree(['run']));
 })
 
 // Static server
 gulp.task('browser-sync', function() {
   browserSync.init({
       server: {
-          baseDir: "./app"
+          baseDir: './app'
       }
   });
 });
@@ -156,22 +153,22 @@ gulp.task('lint', function () {
 gulp.task('run', [ 'build', 'html', 'css', 'js']);
 
 // watch for changes
-gulp.task('watch', ['browser-sync'], function() {
+gulp.task('watch', function() {
 
   // image changes
-  gulp.watch(folder.src + 'images/**/*.+(png|jpg|gif|svg)', ['images', 'browser-sync']);
+  gulp.watch(folder.src + 'images/**/*.+(png|jpg|gif|svg)', ['images']);
 
   // html changes
-  gulp.watch(folder.src + '**/*.html', ['html', 'browser-sync']);
+  gulp.watch(folder.src + '**/*.html', ['html']);
 
   // javascript changes
-  gulp.watch(folder.src + '**/*.js', ['browser-sync']);
+  gulp.watch(folder.src + '**/*.js', ['lint']);
 
   // css changes
-  gulp.watch(folder.src + 'scss/**/*.scss', ['css', 'browser-sync']);
+  gulp.watch(folder.src + 'scss/**/*.scss', ['css']);
 
 });
 
 
 // default task
-gulp.task('default', ['run', 'watch']);
+gulp.task('default', ['watch', 'browser-sync']);

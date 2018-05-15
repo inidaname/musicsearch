@@ -1,4 +1,4 @@
-@import 'fonts';
+@import url('fonts.css');
 @import 'includes/reset';
 @import 'includes/mixins';
 
@@ -149,7 +149,7 @@
 	min-height: 400px;
 	background-color: #383A49;
 	@include mQ('320px', '780px'){
-		display: none;
+		display: block;
 	}
 }
 /* Masking the result section */
