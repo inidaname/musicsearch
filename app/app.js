@@ -14,6 +14,6 @@ angular.module('MusicSearch', [
 	// If you already have an auth token
 	SpotifyProvider.setAuthToken('BQB9WDG6bWa5FguhGjugbMftX-vQNCELBSVPgr8dfuQ_AqnCd0Agci7QTMxb59lfRB_HmJtDQcgo8vpKw-K1Xu-S_uj3--tmZNmFzRvq-QaTzefYa0ay8RA6ayTYS1QX8-n_qoHIzmt3qvqqCZLw0VyNqOMl');
 	$routeProvider.otherwise({'redirectTo': '/'});
- }]).controller('MainCtrl', function (Spotify) {
-	Spotify.login()
-});;
+ }]).controller('MainCtrl', function () {
+	// Spotify.login()
+});
