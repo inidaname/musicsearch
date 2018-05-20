@@ -1,0 +1,627 @@
+/* Raleway font for regular type */
+@font-face
+{
+    font-family: 'Raleway';
+    font-weight: normal;
+    font-style: normal; 
+
+    src: url('Fonts/Raleway-Regular.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-style: normal; 
+
+    src: url('Fonts/Raleway-Bold.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Raleway';
+    font-weight: normal;
+    font-style: italic; 
+
+    src: url('Fonts/Raleway-Italic.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-style: italic; 
+
+    src: url('Fonts/Raleway-BoldItalic.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Raleway Light';
+    font-weight: lighter;
+    font-style: normal; 
+
+    src: url('Fonts/Raleway-Light.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Raleway Light';
+    font-weight: lighter;
+    font-style: italic; 
+
+    src: url('Fonts/Raleway-LightItalic.ttf') format('truetype');
+}
+
+/* Raleway font for medium typeface */
+@font-face
+{
+    font-family: 'Raleway Medium';
+    font-weight: 300;
+    font-style: normal; 
+
+    src: url('Fonts/Raleway-Medium.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Raleway Medium';
+    font-weight: 300;
+    font-style: italic; 
+
+    src: url('Fonts/Raleway-MediumItalic.ttf') format('truetype');
+}
+
+/* Raleway font for thin typeface */
+@font-face
+{
+    font-family: 'Raleway Thin';
+    font-weight: normal;
+    font-style: normal; 
+
+    src: url('Fonts/Raleway-Thin.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Raleway Thin';
+    font-weight: normal;
+    font-style: italic; 
+
+    src: url('Fonts/Raleway-ThinItalic.ttf') format('truetype');
+}
+
+/* Raleway font for extra light typeface */
+@font-face
+{
+    font-family: 'Raleway Lighter';
+    font-weight: 100;
+    font-style: normal; 
+
+    src: url('Fonts/Raleway-ExtraLight.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Raleway Lighter';
+    font-weight: 100;
+    font-style: italic; 
+
+    src: url('Fonts/Raleway-ExtraLightItalic.ttf') format('truetype');
+}
+
+/* Raleway font for extra bold type face*/
+@font-face
+{
+    font-family: 'Raleway Extra';
+    font-weight: bolder;
+    font-style: italic; 
+
+    src: url('Fonts/Raleway-ExtraBoldItalic.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Raleway Extra';
+    font-weight: bolder;
+    font-style: normal; 
+
+    src: url('Fonts/Raleway-ExtraBold.ttf') format('truetype');
+}
+
+/* Raleway font for semi Bold typeface */
+@font-face
+{
+    font-family: 'Raleway Semi';
+    font-weight: 400;
+    font-style: normal; 
+
+    src: url('Fonts/Raleway-SemiBold.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Raleway Semi';
+    font-weight: 400;
+    font-style: italic; 
+
+    src: url('Fonts/Raleway-SemiBoldItalic.ttf') format('truetype');
+}
+
+/* Raleway font for Black typeface */
+@font-face
+{
+    font-family: 'Raleway Black';
+    font-weight: bold;
+    font-style: normal; 
+
+    src: url('Fonts/Raleway-Black.ttf') format('truetype');
+}
+
+@font-face
+{
+    font-family: 'Raleway Black';
+    font-weight: bold;
+    font-style: italic; 
+
+    src: url('Fonts/Raleway-BlackItalic.ttf') format('truetype');
+}
+
+html,
+body
+{
+    font-size: 15px; 
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Header content begins here */
+.header
+{
+    position: relative;
+    z-index: 100000; 
+
+    width: 100%;
+    height: 650px;
+
+    background-color: #ce4283;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ce4283), to(#b2455d));
+    background-image: linear-gradient(to bottom, #ce4283 0%, #b2455d 100%);
+    background-size: cover;
+
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#CE4283, endColorstr=#B2455D);
+}
+.header .hero
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 650px;
+
+    background-image: url('../images/hero-img@2x.png');
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: 45%;
+}
+.header .arrDwn
+{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 100px;
+
+    text-align: center;
+}
+
+.topmost
+{
+    position: relative;
+    z-index: 10000000; 
+
+    width: 100%;
+    margin: 0 auto;
+}
+.topmost img
+{
+    width: 75px;
+    height: 95px;
+    margin-top: 40px; 
+    margin-left: 40px;
+}
+.topmost p
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+
+    position: absolute;
+    top: 35px; 
+    right: 35px;
+
+    letter-spacing: 2px;
+
+    color: #fff;
+}
+
+/* wrapper content */
+.wrapper
+{
+    clear: both;
+
+    width: 100%;
+
+    background-color: #626a74;
+}
+
+/* Search box section starts here */
+.searchSec
+{
+    clear: both; 
+
+    width: 100%;
+    padding: 15px 0;
+
+    text-align: center;
+
+    background-color: #333441;
+}
+.searchSec input
+{
+    position: relative;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 26px;
+}
+.searchSec input[type='text']
+{
+    font-family: 'Raleway Medium', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+
+    -webkit-box-sizing: content-box;
+
+            box-sizing: content-box; 
+    width: 40%;
+    height: 26px;
+    margin: 0 auto;
+    padding-left: 22px;
+
+    color: #636363;
+}
+.searchSec button
+{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    line-height: 40px;
+
+    position: relative;
+
+    width: 120px; 
+    height: 44px;
+    margin-left: -130px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    background-color: #d05d84;
+}
+
+/* result section begins here */
+.resultBg
+{
+    position: relative;
+
+    width: 100%;
+    min-height: 400px;
+    margin: 0;
+
+    background-color: #383a49;
+}
+
+/* Masking the result section */
+.resultSec
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block; 
+
+    width: 100%;
+    min-height: 400px;
+    padding-top: 50px;
+}
+
+.ReLoop
+{
+    position: relative;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+
+    width: 85%;
+    margin: 0 auto;
+
+    list-style-type: none; 
+
+    -ms-flex-wrap: wrap; 
+
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+}
+.ReLoop li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 240px;
+    height: 300px;
+    margin-top: 35px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px 2px #333;
+            box-shadow: 0 0 5px 2px #333;
+}
+.ReLoop li .cardResult
+{
+    position: relative;
+    z-index: 10; 
+
+    width: 100%;
+    height: 245px;
+}
+.ReLoop li .cardResult:hover .imgRes
+{
+    -webkit-filter: blur(7px);
+            filter: blur(7px);
+}
+.ReLoop li .cardResult:hover .showClick
+{
+    bottom: 0;
+
+    height: 100%;
+
+    opacity: .8;
+}
+.ReLoop li .cardResult:hover .clipOval
+{
+    display: none;
+}
+.ReLoop li .cardResult .imgRes
+{
+    position: relative;
+
+    width: 100%;
+    height: 245px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* categorising for artist and album */
+.clipOval
+{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    opacity: .8;
+}
+
+/* for image overlay on hover */
+.showClick
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 100%;
+    left: 50%;
+
+    width: 103%;
+    height: 0;
+
+    -webkit-transition: .5s ease;
+
+    transition: .5s ease;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center; 
+
+    opacity: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.showClick img
+{
+    margin-top: 30%;
+}
+.showClick h3
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold; 
+
+    margin-top: 0;
+
+    color: #fff;
+}
+
+/* defining the card description */
+.cardName
+{
+    position: relative;
+
+    width: 100%;
+    height: 100px;
+    height: 55px;
+
+    border-bottom-right-radius: 5px; 
+    border-bottom-left-radius: 5px;
+    background-color: #fff;
+}
+
+/* Magnify display */
+.MagDis
+{
+    font-family: 'Raleway Thin', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    min-height: 360px;
+    padding-top: 50px; 
+
+    text-align: center;
+
+    color: #ccc;
+    background-color: #383a49;
+}
+.MagDis .BelowMag
+{
+    position: absolute;
+    top: 1;
+    right: 0;
+    bottom: 1;
+    left: 0;
+
+    clear: both;
+
+    width: 70%;
+    margin: 30px auto;
+
+    opacity: .2;
+}
+
+/* The Footer section start here */
+.footer
+{
+    font-family: 'Raleway Light', sans-serif;
+    font-size: 15px; 
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 80px;
+
+    text-align: center;
+
+    background-color: #333441;
+}
+.footer div
+{
+    margin: 0 auto;
+    padding: 30px 0; 
+
+    color: #fff;
+}
+.footer div p
+{
+    display: inline;
+}
+.footer div p:nth-child(1):after
+{
+    content: ' -';
+}
+@media screen and (min-width: 320px) and (max-width: 780px)
+{
+    .header .hero
+    {
+        height: 700px;
+
+        background-size: 100%;
+    }
+    .header
+    {
+        height: 700px;
+
+        background-size: 100%;
+    }
+    .topmost
+    {
+        padding-top: 20px;
+    }
+    .topmost img
+    {
+        width: 40px;
+        height: 50px;
+        margin-top: 20px; 
+        margin-left: 20px;
+    }
+    .topmost p
+    {
+        top: 30px; 
+        right: 30px;
+
+        letter-spacing: 0;
+    }
+    .searchSec input[type='text']
+    {
+        width: 80%;
+        height: 35px;
+    }
+    .searchSec button
+    {
+        font-family: 'Raleway Semi', sans-serif;
+        font-size: 22px; 
+
+        width: 60%;
+        height: 55px;
+        margin: 10px auto;
+
+        border: 0;
+    }
+    .resultBg
+    {
+        display: block;
+    }
+    .MagDis
+    {
+        display: none;
+    }
+    .footer
+    {
+        height: 110px;
+    }
+    .footer div p:nth-child(1):after
+    {
+        content: ' ';
+    }
+    .footer div p
+    {
+        font-family: 'Raleway Semi', sans-serif;
+
+        display: block;
+        clear: both; 
+
+        width: 100%;
+        margin: 10px auto;
+    }
+}

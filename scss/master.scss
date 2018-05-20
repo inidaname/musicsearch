@@ -1,0 +1,360 @@
+@import url('fonts.css');
+@import 'includes/reset';
+@import 'includes/mixins';
+
+/* Header content begins here */
+.header{
+	position: relative;
+	background-size: cover;
+	background-color: #CE4283;
+	filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#CE4283, endColorstr=#B2455D);
+	// background-image: -moz-linear-gradient(to bottom, #CE4283 0%, #B2455D 100%);
+	// background-image: -webkit-linear-gradient(to bottom, #CE4283 0%, #B2455D 100%);
+	// background-image: -ms-linear-gradient(to bottom, #CE4283 0%, #B2455D 100%);
+	background-image: linear-gradient(to bottom, #CE4283 0%, #B2455D 100%);
+	// background-image: -o-linear-gradient(to bottom, #CE4283 0%, #B2455D 100%);
+	// background-image: -webkit-gradient(linear, right top, right bottom, color-stop(0%,#CE4283), color-stop(100%,#B2455D));
+	height: 650px;
+	width: 100%;
+	z-index: 100000;
+	.hero{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 650px;
+		background-image: url('../images/hero-img@2x.png');
+		background-size: 45%;
+		background-position: center;
+		background-repeat: no-repeat;
+		@include mQ('320px', '780px'){
+			height: 700px;
+			background-size: 100%;
+		}
+	}
+	@include mQ('320px', '780px'){
+		height: 700px;
+		background-size: 100%;
+	}
+	.arrDwn{
+		position: absolute;
+		bottom: 0;
+		height: 100px;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.topmost{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 10000000;
+	@include mQ('320px', '780px'){
+		padding-top: 20px;
+	}
+	img{
+		width: 75px;
+		height: 95px;
+		margin-left: 40px;
+		margin-top: 40px;
+		@include mQ('320px', '780px'){
+			width: 40px;
+			height: 50px;
+			margin-left: 20px;
+			margin-top: 20px;
+		}
+	}
+	p{
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		font-weight: normal;
+		font-style: normal;
+		position: absolute;
+		letter-spacing: 2px;
+		right: 35px;
+		top: 35px;
+		@include mQ('320px', '780px'){
+			letter-spacing: 0;
+			right: 30px;
+			top: 30px;
+		}
+	}
+}
+
+/* wrapper content */
+.wrapper{
+	clear: both;
+	width: 100%;
+	background-color: lighten(#4b5158, 10%);
+}
+
+/* Search box section starts here */
+.searchSec{
+	width: 100%;
+	text-align: center;
+	padding: 15px 0;
+	background-color: #333441;
+	clear: both;
+	input{
+		position: relative;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 26px;
+		&[type="text"]{
+			width: 40%;
+			margin: 0 auto;
+			height: 26px;
+			font-family: 'Raleway Medium', sans-serif;
+			font-weight: normal;
+			font-size: 16px;
+			color: lighten(#333, 19%);
+			padding-left: 22px;
+			box-sizing: content-box;
+			@include mQ('320px', '780px'){
+				width: 80%;
+				height: 35px;
+			}
+		}
+	}
+	button{
+		position: relative;
+		background-color: #D05D84;
+		line-height: 40px;
+		border: 1px solid #ccc;
+		font-family: 'Raleway', sans-serif;
+		font-size: 15px;
+		color: #fff;
+		text-transform: uppercase;
+		border-radius: 24px;
+		margin-left: -130px;
+		height: 44px;
+		width: 120px;
+		@include mQ('320px', '780px'){
+			font-family: 'Raleway Semi', sans-serif;
+			margin: 10px auto;
+			width: 60%;
+			border: 0px;
+			height: 55px;
+			font-size: 22px;
+		}
+	}
+}
+
+/* result section begins here */
+.resultBg{
+	position: relative;
+	margin: 0;
+	width: 100%;
+	min-height: 400px;
+	background-color: #383A49;
+	@include mQ('320px', '780px'){
+		display: block;
+	}
+}
+/* Masking the result section */
+.resultSec{
+	position: relative;
+	width: 100%;
+	top: 0;
+	left: 0;
+	min-height: 400px;
+	padding-top: 50px;
+	display: block;
+}
+
+.ReLoop{
+	position: relative;
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
+	list-style-type: none;
+	li{
+		position: relative;
+		display: inline-block;
+		width: 240px;
+		height: $cardHeight;
+		border-radius: 5px;
+		margin-right: 15px;
+		margin-bottom: 15px;
+		margin-top: 35px;
+		box-shadow: 0px 0px 5px 2px #333;
+		.cardResult{
+			position: relative;
+			width: 100%;
+			height: 245px;
+			z-index: 10;
+			&:hover .imgRes {
+			  filter: blur(7px);
+			}
+
+			&:hover .showClick {
+			  bottom: 0;
+			  height: 100%;
+			  opacity: 0.8;
+			}
+			&:hover .clipOval{
+				display: none;
+			}
+
+			.imgRes{
+				position: relative;
+				width: 100%;
+				height: $picHeight;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+			}
+		}
+	}
+}
+
+/* categorising for artist and album */
+	.clipOval{
+		position: absolute;
+		left: 10px;
+		bottom: 10px;
+		opacity: 0.8;
+	}
+
+	/* for image overlay on hover */
+	.showClick {
+	  transition: .5s ease;
+	  width: 103%;
+	  height: 0;
+	  opacity: 0;
+	  position: absolute;
+	  bottom: 100%;
+	  left: 50%;
+	  right: 0;
+	  top: 50%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  border-top-left-radius: 5px;
+	  border-top-right-radius: 5px;
+	  text-align: center;
+	  img{
+		  margin-top: 30%;
+	  }
+	  h3{
+		  margin-top: 0px;
+		  color: #fff;
+		  font-family: 'Raleway', sans-serif;
+		  font-weight: bold;
+	  }
+	}
+
+/* defining the card description */
+.cardName{
+	position: relative;
+	width: 100%;
+	height: 100px;
+	background-color: #ffffff;
+	height: $cardHeight - $picHeight;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+/* Magnify display */
+.MagDis{
+	position: relative;
+	width: 100%;
+	display: block;
+	font-family: 'Raleway Thin', sans-serif;
+	font-weight: normal;
+	font-size: 20px;
+	color: #ccc;
+	background-color: #383A49;
+	min-height: 360px;
+	text-align: center;
+	padding-top: 50px;
+	@include mQ('320px', '780px'){
+		display: none;
+	}
+	.BelowMag{
+		position: absolute;
+		left: 0;
+		right: 0;
+		clear: both;
+		width: 70%;
+		top: 1;
+		bottom: 1;
+		margin: 30px auto;
+		opacity: 0.2;
+	}
+}
+
+/* The Footer section start here */
+.footer{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	height: 80px;
+	display: block;
+	background-color: #333441;
+	font-family: 'Raleway Light', sans-serif;
+	font-size: 15px;
+	@include mQ('320px', '780px'){
+		height: 110px;
+	}
+	div{
+		margin: 0 auto;
+		color: #fff;
+		padding: 30px 0;
+		p{
+			display: inline;
+			&:nth-child(1):after{
+				content: ' -';
+				@include mQ('320px', '780px'){
+					content: ' ';
+				}
+			}
+			@include mQ('320px', '780px'){
+				font-family: 'Raleway Semi', sans-serif;
+				display: block;
+				margin: 10px auto;
+				width: 100%;
+				clear: both;
+			}
+		}
+	}
+}
+
+/* The result Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+	font-weight: bold;
+	&:hover, &:focus {
+		color: black;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}

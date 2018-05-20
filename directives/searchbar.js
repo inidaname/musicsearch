@@ -21,7 +21,7 @@ angular.module('MusicSearch')
 			$location.path('/search/'+NowArr.join('+'));
 		}
 
-		Spotify.search($scope.searchAble, 'artist').then(function (data) {
+		Spotify.search($scope.searchAble).then(function (data) {
 			$scope.TheSearch = data.data.artists;
 			CommonProp.SetData($scope.TheSearch)
 		});
